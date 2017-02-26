@@ -1,0 +1,43 @@
+*{
+		padding:0;
+		margin:0;
+	}
+	.square{
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+		width:400px;
+		height: 300px;
+		background: #ccc;
+		overflow: hidden;
+		border:1px solid #ccc;
+	}
+	#index{
+		position: relative;
+		top:-100px;
+		left:-50px;
+		transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		-moz-transform:rotate(45deg); 
+		-webkit-transform:rotate(45deg);
+		-o-transform:rotate(45deg); 
+	}
+	.tail{
+		width:300px;
+		height: 25px;
+		position: absolute;
+		top:0;
+		left:450px;
+		right:0;
+		bottom:0;
+		margin:auto;
+		border:1px solid #ccc;
+		transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		-moz-transform:rotate(90deg); 
+		-webkit-transform:rotate(90deg);
+		-o-transform:rotate(90deg); 
+	}
