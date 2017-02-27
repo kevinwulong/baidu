@@ -1,110 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>index2</title>
-	<style>
-	*{
-		padding:0;
-		margin:0;
-	}
-	.square{
-		position: absolute;
-		top:0;
-		left:0;
-		right:0;
-		bottom:0;
-		margin:auto;
-		width:400px;
-		height: 300px;
-		background: #ccc;
-		overflow: hidden;
-		border:1px solid #ccc;
-	}
-	#index{
-		position: relative;
-		top:-100px;
-		left:-50px;
-		transform:rotate(45deg);
-		-ms-transform:rotate(45deg);
-		-moz-transform:rotate(45deg); 
-		-webkit-transform:rotate(45deg);
-		-o-transform:rotate(45deg); 
-	}
-	.tail{
-		width:300px;
-		height: 25px;
-		position: absolute;
-		top:0;
-		left:450px;
-		right:0;
-		bottom:0;
-		margin:auto;
-		border:1px solid #ccc;
-		transform:rotate(90deg);
-		-ms-transform:rotate(90deg);
-		-moz-transform:rotate(90deg); 
-		-webkit-transform:rotate(90deg);
-		-o-transform:rotate(90deg); 
-	}
-	.text{
-		width:100px;
-		height: 330px;
-		position: absolute;
-		top:5px;
-		left:600px;
-		right:0;
-		bottom:0;
-		margin:auto;
-		border: 1px solid #ccc;
-	}
-	</style>
+<title>index2</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<div class="square">
-	<canvas  id="index" width="500" height="500" ></canvas>
-</div>
-
-<div class="tail">
-	<canvas id="index2" width="300" height="25"></canvas>
-</div>
+<div class="square"><canvas  id="index" width="500" height="500" ></canvas></div>
+<div class="tail"><canvas id="index2" width="300" height="25"></canvas></div>
 
 <div class="text">
+	<span>R:</span> <input type="number" class="r" min="0" max="255">
+	<span>G:</span> <input type="number" class="g" min="0" max="255">
+	<span>B:</span> <input type="number" class="b" min="0" max="255">
+	<span>H:</span> <input type="number" class="h" step="0.01" min="0" max="1">
+	<span>S:</span> <input type="number" class="s" step="0.01" min="0" max="1">
+	<span>L:</span> <input type="number" class="l" step="0.01" min="0" max="1">
 </div>
+
 <script src="jquery-3.1.1.min.js"></script>
-<script>
-
-//square
-var c =document.getElementById('index');
-var ctx1= c.getContext("2d");
-
-var grd = ctx1.createLinearGradient(0, 0, 500, 0);
-grd.addColorStop(0, "black");
-grd.addColorStop(0.5, "red");
-grd.addColorStop(1, "white");
-
-
-ctx1.fillStyle=grd;
-ctx1.fillRect(0, 0, 500, 500);
-
-//tail
-
-var b = document.getElementById('index2');
-var ctx2= b.getContext("2d");
-
-var grd = ctx2.createLinearGradient(0, 0, 300, 0);
-grd.addColorStop(0, "red");
-grd.addColorStop(0.2, "orange");
-grd.addColorStop(0.3, "Yellow");
-grd.addColorStop(0.4, "green");
-grd.addColorStop(0.6, "blue");
-grd.addColorStop(0.8, "purple");
-grd.addColorStop(0.9, "Fuchsia ");
-grd.addColorStop(1, "red");
-
-ctx2.fillStyle=grd;
-ctx2.fillRect(0, 0, 300, 25);
-
-</script>
+<script type="text/javascript" src="http://www.zhangxinxu.com/study/js/zxx.color_exchange.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

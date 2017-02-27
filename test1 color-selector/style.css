@@ -1,4 +1,4 @@
-*{
+	*{
 		padding:0;
 		margin:0;
 	}
@@ -9,7 +9,7 @@
 		right:0;
 		bottom:0;
 		margin:auto;
-		width:400px;
+		width:340px;
 		height: 300px;
 		background: #ccc;
 		overflow: hidden;
@@ -40,4 +40,22 @@
 		-moz-transform:rotate(90deg); 
 		-webkit-transform:rotate(90deg);
 		-o-transform:rotate(90deg); 
+	}
+	.text{
+		width:100px;
+		height: 330px;
+		position: absolute;
+		top:5px;
+		left:600px;
+		right:0;
+		bottom:0;
+		margin:auto;
+	}
+	.text>input{
+		width:40px;
+	}
+	.text>span{
+		display: inline-block;
+		width:30px;
+		margin:15px 5px;
 	}
